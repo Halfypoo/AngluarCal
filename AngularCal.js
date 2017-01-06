@@ -31,9 +31,11 @@
 				$scope.weeks = cal_days_labels;
 				$scope.today = new Date();
 				$scope.calTime = $scope.today;
+				/*
+				Creates monthly grid of Date objects
+				*/
 				$scope.fillDays = function(firstDaySet) {
 					for (var i = 0; i < 6; i++) {
-
 						$scope.daysList.push([]);
 						for (var a = 0; a < 7; a++) {
 							if ($scope.counter <= monthLength && (a == firstDaySet || $scope.counter > 0)) {
@@ -47,7 +49,11 @@
 					}
 					return $scope.daysList;
 				};
-
+                /*
+				Sets the calendar time.
+				Declares
+				Activates calendar building.
+				*/
 				$scope.setCalTime = function() {
 					if (true/*$scope.me.options.date == null*/) {
 						$scope.startingDate = $scope.today;
@@ -80,26 +86,10 @@
 					}
 				};
 
-				$scope.monthAhead2 = function() {
-					if ($scope.calTime.getMonth() == 11) {
-
-					}
-					else {
-
-					}
-				};
-				$scope.monthBack2 = function() {
-					if ($scope.calTime.getMonth == 0) {
-
-					}
-					else {
-
-					}
-				}
 
 			//Functionality
 				//$api.getLayerEvents($scope.layerId).success(function(data) {$scope.layerEvents = data.data});
-
+                //Rewrite later
 				$scope.monthAhead = function() {
 						if (firstDay.getMonth() == 11) {
 							yearIn++;
@@ -123,6 +113,7 @@
 							$scope.days = $scope.fillDays(firstDay.getDay());
 						}
 				};
+				//Rewrite later
 				$scope.monthBack = function() {
 					if (firstDay.getMonth() == 0) {
 						yearIn--;
@@ -168,6 +159,8 @@
 				'07:00','08:00','09:00','10:00','11:00','12:00','13:00','14:00','15:00',
 				'16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00'];
 				$scope.year = currentDate.getFullYear();
+
+				//Creates a 7x48 grid of Date objects
 				$scope.weeklyFactory = function(startDate) {
 					var timeList = [];
 					var daysList = [];
