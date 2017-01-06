@@ -1,0 +1,12 @@
+<div>
+	<div class="calendar-panel" ng-init="calendar = 'month'">
+		<button type="button" ng-click="calendar = 'agenda'">Agenda</button>
+		<button type="button" ng-click="calendar = 'week'">Week</button>
+		<button type="button" ng-click="calendar = 'month'">Month</button>
+		<button type="button" ng-click="ahead()">Ahead</button>
+		<button type="button" ng-click="back()">Back</button>
+	</div>
+	<agenda-calendar ng-show="calendar == 'agenda'"></agenda-calendar>
+	<weekly-calendar ng-show="calendar == 'week'"></weekly-calendar>
+	<monthly-calendar ng-show="calendar == 'month'"></monthly-calendar>
+</div>

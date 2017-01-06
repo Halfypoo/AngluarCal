@@ -1,0 +1,7 @@
+<table>
+	<tr><th colspan="7">{{month}} {{year}}</th><tr>
+	<tr><td ng-repeat="row in weeks">{{row}}</td></tr>
+	<tr ng-repeat="col in days" class="calendar-row-monthly">
+		<td ng-repeat="cell in col track by $index" class="calendar-day-monthly">{{cell.getDate()}}<br><a ng-repeat="event in layerEvents" ui-sref="main.eventview ({id: event.id})" ng-if="cell.getDate() == event.start_date.getDate() && cell.getMonth() == event.start_date.getMonth() && cell.getFullYear() == event.start_date.getFullYear()">{{event.start_date | date : 'hh:mm'}} {{event.name}}<br></a></td>
+	</tr>
+</table>

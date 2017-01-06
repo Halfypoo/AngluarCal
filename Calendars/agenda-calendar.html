@@ -1,0 +1,7 @@
+<table>
+	<tr><th colspan="7">{{dailyCal.dayName}}{{dailyCal.date}}</th><tr>
+	<tr ng-repeat="hour in dailyCal.times track by $index">
+		<td class="calendar-times">{{hour}}</td>
+		<td class="daily-30-mins">{{dailyCal.nothing}}</td>
+	</tr>
+</table>

@@ -1,0 +1,14 @@
+<table class="weekly-tables">
+	<tr><td class="empty-box"></td></tr>
+	<tr ng-repeat="hour in times">
+		<td class="calendar-times">{{hour}}</td>
+	</tr>
+</table>
+<table ng-repeat="list in weeklyDays" class="weekly-tables">
+	<th>{{list[0] | date:'EEE dd/MM'}}</th>
+	<tr ng-repeat="item in list track by $index">
+		<td class="weekly-square"></td>
+	</tr>
+</table>
+
+

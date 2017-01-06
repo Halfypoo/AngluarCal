@@ -1,0 +1,51 @@
+td.calendar-day-monthly {
+	border: 1px solid #D1D1E0;
+	width: 130px;
+	vertical-align:top;
+	padding-left: 1%;
+}
+
+tr.calendar-row-monthly {
+	height: 100px;
+	
+}
+
+td.weekly-30-mins {
+	border: 1px solid #D1D1E0;
+	width: 130px;
+}
+
+td.daily-30-mins {
+	border: 1px solid #D1D1E0;
+	width: 80%;
+}
+
+td.calendar-times {
+	border: 1px solid #D1D1E0;
+	height: 40px;
+	width: 60px;
+}
+
+td.weekly-square {
+	border: 1px solid #D1D1E0;
+	width: 100px;
+	height: 20px;
+}
+
+td.empty-box {
+	height: 20px;
+}
+
+div.add-event {
+	background-color: white;
+
+}
+
+.weekly-tables {
+	float: left;
+}
+
+.day-name {
+	padding-left: 24%;
+	margin-left	: 50px;
+}
